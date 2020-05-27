@@ -10,9 +10,7 @@ $clr-neutral-secondary: hsl(218, 22%, 67%);
 $clr-light: #fff;
 $dark-shadow: rgba(66, 61, 61, 0.699);
 
-// focus state colors
-$clr-focus: #ffb1f5;
-
+// reset stylesheet
 *,
 *::before,
 *::after {
@@ -45,6 +43,13 @@ body {
     box-shadow: 0px 0px 15px $dark-shadow;
     max-width: 250px;
     margin: 0 auto;
+    transition: transform 0.3s;
+
+    &:hover, &:focus {
+        opacity: 1;
+        transform: scale(1.07);
+        background: $clr-secondary;
+    }
 }
 
 .main-container {
@@ -136,7 +141,6 @@ body {
         }
     }
 }
-
 
 @media (min-width: 480px) {
     .main-container {
