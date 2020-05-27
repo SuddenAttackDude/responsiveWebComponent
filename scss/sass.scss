@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+$font-stack: "Karla", sans-serif;
+
+// colors
+$clr-primary: hsl(179, 62%, 43%);
+$clr-secondary: hsl(71, 73%, 54%);
+$clr-neutral: hsl(204, 43%, 93%);
+$clr-neutral-secondary: hsl(218, 22%, 67%);
+$clr-light: #fff;
+$dark-shadow: rgba(66, 61, 61, 0.699);
+
+// focus state colors
+$clr-focus: #ffb1f5;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: $clr-neutral;
+    font-family: $font-stack;
+}
+
+.btn {
+    display: block;
+    background-color: $clr-secondary;
+    color: $clr-light;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    padding: .8em 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px $dark-shadow;
+}
+
+.main-container {
+    margin: 4em 2em;
+    height: 700px;
+}
+
+.wrapper {
+    padding: 2em 1.5em;
+
+}
+
+.first-block {
+    background-color: $clr-light;
+
+    & * {
+        // selects all direct children
+        padding-bottom: 1em;
+    }
+
+    h1 {
+        font-size: 1.3em;
+        color: $clr-primary;
+    }
+
+    h2 {
+        font-size: 1em;
+        color: $clr-secondary;
+    }
+
+    p {
+        font-size: 0.85em;
+        line-height: 1.9em;
+        color: $clr-neutral-secondary;
+        margin-bottom: 0;
+    }
+}
+
+.second-block {
+    background-color: $clr-primary;
+    color: $clr-light;
+
+    & * {
+        margin-bottom: 1em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    h3 {
+        font-weight: 700;
+        font-size: 1.8em;
+        margin-bottom: .4em;
+
+        span {
+            font-weight: 300;
+            opacity: 0.5;
+            font-size: 1rem;
+            padding-left: 0.3em;
+        }
+    }
+
+    p {
+        margin-bottom: 1.5em;
+    }
+
+    
+}
